@@ -7,8 +7,6 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid=ShrinkCraft.MODID, name=ShrinkCraft.MODNAME, version=ShrinkCraft.VERSION)
 

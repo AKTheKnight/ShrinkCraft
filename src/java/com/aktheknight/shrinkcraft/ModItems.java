@@ -5,10 +5,10 @@ import net.minecraft.item.Item;
 
 public class ModItems {
 	
-	public static Item ShrinkShard;
+	public static Item ShrinkGem;
 	
 	public static final void init() {
-		ShrinkShard = new ShrinkShard();
-		GameRegistry.registerItem(ShrinkShard, "ShrinkShard");
+		ShrinkGem = new ShrinkGem();
+		GameRegistry.registerItem(ShrinkGem, "ShrinkGem");
 	}
 }
