@@ -13,14 +13,14 @@ public class ModWorldGen implements IWorldGenerator {
 	private WorldGenerator gen_shrink_ore; //Generates Tutorial Ore (used in Overworld)
 
 	public ModWorldGen() {
-	    this.gen_shrink_ore = new WorldGenMinable(ModBlocks.ShrinkOre, 20);
+	    this.gen_shrink_ore = new WorldGenMinable(ModBlocks.shrinkOre, 8);
 	}
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {   
 		switch (world.provider.dimensionId) {
 	    case 0: //Overworld
-	    	this.runGenerator(this.gen_shrink_ore, world, random, chunkX, chunkZ, 100, 0, 64);
+	    	this.runGenerator(this.gen_shrink_ore, world, random, chunkX, chunkZ, 10, 0, 30);
 	        break;
 	    case -1: //Nether
 

@@ -29,5 +29,7 @@ public class ShrinkCraft {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent e) {
 	    GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
+	    ModRecipes.init();
+//		MinecraftForge.addGrassSeed(new ItemStack(ModItems.shrinkShard), 4);
 	}
 }

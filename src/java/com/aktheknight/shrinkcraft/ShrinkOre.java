@@ -9,35 +9,35 @@ import net.minecraft.item.Item;
 
 public class ShrinkOre extends Block {
 	
-	public String unlocalizedName = "ShrinkOre";
+	public String unlocalizedName = "shrinkOre";
 	
 	private Item drop;
 	private int meta;
-	private int least_quantity;
-	private int most_quantity;
 	
-	protected ShrinkOre(Material mat, Item drop, int meta, int least_quantity, int most_quantity) {
+	protected ShrinkOre(Material mat, Item drop, int meta) {
 		super(mat);
 		this.drop = drop;
 		this.meta = meta;
-		this.least_quantity = least_quantity;
-		this.most_quantity = most_quantity;
 		this.setBlockName(unlocalizedName);
 		this.setBlockTextureName(ShrinkCraft.MODID + ":" + unlocalizedName);
 		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setHardness(4);
 	}
 	
-	protected ShrinkOre(Material mat, Item drop, int least_quantity, int most_quantity) {
-		this(mat, drop, 0, least_quantity, most_quantity);
-	}
-
 	protected ShrinkOre(Material mat, Item drop) {
-		this(mat, drop, 1, 1);
+		this(mat, drop, 0);
 	}
 
 	@Override
 	public Item getItemDropped(int meta, Random random, int fortune) {
-		return this.drop;
+		Item toolUsed = harvesters.get().getCurrentEquippedItem().getItem();
+		int harvestLevel = toolUsed.getHarvestLevel(harvesters.get().getCurrentEquippedItem(), "pickaxe");
+		if (harvestLevel > 1) {
+			return this.drop;
+		}
+		else {
+			return ModItems.shrinkShard;
+		}
 	}
 
 	@Override
@@ -45,10 +45,42 @@ public class ShrinkOre extends Block {
 		return meta;
 	}
 
+/*	@Override
+	public int quantityDropped(int meta, int fortune, Random random) {
+		if (this.least_quantity >= this.most_quantity) {
+			return this.least_quantity;
+		}
+		return this.least_quantity + random.nextInt(this.most_quantity - this.least_quantity + fortune + 1);
+	} */
+	
 	@Override
 	public int quantityDropped(int meta, int fortune, Random random) {
-		if (this.least_quantity >= this.most_quantity)
-			return this.least_quantity;
-		return this.least_quantity + random.nextInt(this.most_quantity - this.least_quantity + fortune + 1);
+		int least, most;
+		Item toolUsed = harvesters.get().getCurrentEquippedItem().getItem();
+		int harvestLevel = toolUsed.getHarvestLevel(harvesters.get().getCurrentEquippedItem(), "pickaxe");
+		switch(harvestLevel) {
+		case 0:
+			least = 1;
+			most = 3;
+			return least + random.nextInt(most - least + fortune);
+		case 1:
+			least = 2;
+			most = 4;
+			return least + random.nextInt(most - least + fortune + 1);
+		case 2:
+			least = 1;
+			most = 3;
+			return least + random.nextInt(most - least + fortune + 1);
+		case 3:
+			least = 2;
+			most = 4;
+			return least + random.nextInt(most - least + fortune + 1);
+		default:
+			least = 0;
+			most = 2;
+			return least + random.nextInt(most - least + fortune + 1);
+		}
+			
+			
 	}
 }

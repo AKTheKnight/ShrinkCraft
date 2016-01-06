@@ -6,10 +6,12 @@ import net.minecraft.block.material.Material;
 
 public final class ModBlocks {
 	
-	public static Block ShrinkOre;
+	public static Block shrinkOre;
+	public static Block shrinkBlock;
 
     public static final void init() {
-    	GameRegistry.registerBlock(ShrinkOre = new ShrinkOre(Material.rock, ModItems.ShrinkGem, 2, 4), "testingOre");
+    	GameRegistry.registerBlock(shrinkOre = new ShrinkOre(Material.rock, ModItems.shrinkGem), "shrinkOre");
+    	GameRegistry.registerBlock(shrinkBlock = new ShrinkBlock(Material.rock), "shrinkBlock");
     	
     }
 
