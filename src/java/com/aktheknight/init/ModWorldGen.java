@@ -1,4 +1,4 @@
-package com.aktheknight.shrinkcraft;
+package com.aktheknight.init;
 
 import java.util.Random;
 

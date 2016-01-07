@@ -1,5 +1,8 @@
 //TEMP NAME OBVIOUSLY
-package com.aktheknight.shrinkcraft;
+package com.aktheknight.items;
+
+import com.aktheknight.shrinkcraft.ShrinkCraft;
+import com.aktheknight.shrinkcraft.Util;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

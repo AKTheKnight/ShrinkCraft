@@ -1,6 +1,9 @@
-package com.aktheknight.shrinkcraft;
+package com.aktheknight.blocks;
 
 import java.util.Random;
+
+import com.aktheknight.init.ModItems;
+import com.aktheknight.shrinkcraft.ShrinkCraft;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -14,7 +17,7 @@ public class ShrinkOre extends Block {
 	private Item drop;
 	private int meta;
 	
-	protected ShrinkOre(Material mat, Item drop, int meta) {
+	public ShrinkOre(Material mat, Item drop, int meta) {
 		super(mat);
 		this.drop = drop;
 		this.meta = meta;
@@ -24,7 +27,7 @@ public class ShrinkOre extends Block {
 		this.setHardness(4);
 	}
 	
-	protected ShrinkOre(Material mat, Item drop) {
+	public ShrinkOre(Material mat, Item drop) {
 		this(mat, drop, 0);
 	}
 

@@ -1,13 +1,15 @@
-package com.aktheknight.shrinkcraft;
+package com.aktheknight.items;
+
+import com.aktheknight.shrinkcraft.ShrinkCraft;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class ShrinkGem extends Item {
+public class RedGem extends Item {
 	
-	public String unlocalizedName = "shrinkGem";
+	public String unlocalizedName = "redGem";
 	
-	public ShrinkGem() {
+	public RedGem() {
 		maxStackSize = 64;
 		setCreativeTab(CreativeTabs.tabMaterials);
 		setUnlocalizedName(unlocalizedName);

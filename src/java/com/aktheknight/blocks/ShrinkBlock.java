@@ -1,4 +1,6 @@
-package com.aktheknight.shrinkcraft;
+package com.aktheknight.blocks;
+
+import com.aktheknight.shrinkcraft.ShrinkCraft;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -10,7 +12,7 @@ public class ShrinkBlock extends Block {
 	
 	private int meta;
 	
-	protected ShrinkBlock(Material mat, int meta) {
+	public ShrinkBlock(Material mat, int meta) {
 		super(mat);
 		this.meta = meta;
 		this.setBlockName(unlocalizedName);
@@ -19,7 +21,7 @@ public class ShrinkBlock extends Block {
 		this.setHardness(4);
 	}
 	
-	protected ShrinkBlock(Material mat) {
+	public ShrinkBlock(Material mat) {
 		this(mat, 0);
 	}
 }
