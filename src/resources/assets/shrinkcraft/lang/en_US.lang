@@ -1,7 +1,8 @@
 item.shrinkGem.name=Shrink Gem
 item.shrinkShard.name=Shrink Shard
 item.redGem.name=Red Gem
-item.shrinker.name=Shrinker
+item.basicShrinker.name=Basic Shrinker
+item.advancedShrinker.name=Advanced Shrinker
 
 item.testingStick.name=Testing Stick
 

@@ -14,11 +14,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class Shrinker extends Item {
+public class AdvancedShrinker extends Item {
 	
-	public String unlocalizedName = "shrinker";
+	public String unlocalizedName = "advancedShrinker";
 	
-	public Shrinker() {
+	public AdvancedShrinker() {
 		maxStackSize = 1;
 		setCreativeTab(CreativeTabs.tabMaterials);
 		setUnlocalizedName(unlocalizedName);
@@ -37,7 +37,7 @@ public class Shrinker extends Item {
         if (world.isRemote == false) {
             NBTTagCompound comp = stack.getTagCompound();
             if (hasBlock(comp)) {
-                placeBlock(stack, world, x, y, z, side);
+                placeBlock(stack, player, world, x, y, z, side);
             }
             else {
                 pickupBlock(stack, player, world, x, y, z);
@@ -47,7 +47,7 @@ public class Shrinker extends Item {
         return false;
     }
 	
-	private void placeBlock(ItemStack stack, World world, int x, int y, int z, int side) {
+	private void placeBlock(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side) {
         int xPlace = x + ForgeDirection.getOrientation(side).offsetX;
         int yPlace = y + ForgeDirection.getOrientation(side).offsetY;
         int zPlace = z + ForgeDirection.getOrientation(side).offsetZ;
