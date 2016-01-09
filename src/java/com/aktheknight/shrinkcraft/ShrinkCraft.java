@@ -3,10 +3,10 @@ package com.aktheknight.shrinkcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.aktheknight.init.ModBlocks;
-import com.aktheknight.init.ModItems;
-import com.aktheknight.init.ModRecipes;
-import com.aktheknight.init.ModWorldGen;
+import com.aktheknight.shrinkcraft.init.ModBlocks;
+import com.aktheknight.shrinkcraft.init.ModItems;
+import com.aktheknight.shrinkcraft.init.ModRecipes;
+import com.aktheknight.shrinkcraft.init.ModWorldGen;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -18,7 +18,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ShrinkCraft {
 	public static final String MODID = "ShrinkCraft";
 	public static final String MODNAME = "ShrinkCraft";
-	public static final String VERSION = "1.7.10-1.0.2";
+	public static final String VERSION = "1.7.10-1.0.3";
 	
 	@Mod.Instance
 	public static ShrinkCraft instance;

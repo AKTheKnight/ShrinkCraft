@@ -1,4 +1,4 @@
-package com.aktheknight.init;
+package com.aktheknight.shrinkcraft.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Items;

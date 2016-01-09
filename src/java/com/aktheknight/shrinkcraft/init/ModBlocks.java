@@ -1,7 +1,7 @@
-package com.aktheknight.init;
+package com.aktheknight.shrinkcraft.init;
 
-import com.aktheknight.blocks.ShrinkBlock;
-import com.aktheknight.blocks.ShrinkOre;
+import com.aktheknight.shrinkcraft.blocks.ShrinkBlock;
+import com.aktheknight.shrinkcraft.blocks.ShrinkOre;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;

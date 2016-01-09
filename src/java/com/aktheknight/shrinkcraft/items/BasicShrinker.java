@@ -1,5 +1,5 @@
 //TEMP NAME OBVIOUSLY
-package com.aktheknight.items;
+package com.aktheknight.shrinkcraft.items;
 
 import com.aktheknight.shrinkcraft.ShrinkCraft;
 import com.aktheknight.shrinkcraft.Util;
@@ -92,6 +92,8 @@ public class BasicShrinker extends Item {
             tagCompound.setInteger("block", id);
             tagCompound.setInteger("meta", meta);
             world.setBlockToAir(x, y, z);
+            
+            world.markBlockForUpdate(x, y, z);
 
             Util.notify(player, "Picked up: " + blockName);
         } 

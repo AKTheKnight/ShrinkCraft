@@ -1,5 +1,5 @@
 //TEMP NAME OBVIOUSLY
-package com.aktheknight.items;
+package com.aktheknight.shrinkcraft.items;
 
 import com.aktheknight.shrinkcraft.ShrinkCraft;
 

@@ -1,11 +1,11 @@
-package com.aktheknight.init;
+package com.aktheknight.shrinkcraft.init;
 
-import com.aktheknight.items.RedGem;
-import com.aktheknight.items.ShrinkGem;
-import com.aktheknight.items.ShrinkShard;
-import com.aktheknight.items.AdvancedShrinker;
-import com.aktheknight.items.BasicShrinker;
-import com.aktheknight.items.TestingStick;
+import com.aktheknight.shrinkcraft.items.AdvancedShrinker;
+import com.aktheknight.shrinkcraft.items.BasicShrinker;
+import com.aktheknight.shrinkcraft.items.RedGem;
+import com.aktheknight.shrinkcraft.items.ShrinkGem;
+import com.aktheknight.shrinkcraft.items.ShrinkShard;
+import com.aktheknight.shrinkcraft.items.TestingStick;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;

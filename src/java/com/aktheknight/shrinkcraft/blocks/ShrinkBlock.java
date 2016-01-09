@@ -1,4 +1,4 @@
-package com.aktheknight.blocks;
+package com.aktheknight.shrinkcraft.blocks;
 
 import com.aktheknight.shrinkcraft.ShrinkCraft;
 

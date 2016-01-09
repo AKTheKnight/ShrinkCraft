@@ -1,9 +1,9 @@
-package com.aktheknight.blocks;
+package com.aktheknight.shrinkcraft.blocks;
 
 import java.util.Random;
 
-import com.aktheknight.init.ModItems;
 import com.aktheknight.shrinkcraft.ShrinkCraft;
+import com.aktheknight.shrinkcraft.init.ModItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
