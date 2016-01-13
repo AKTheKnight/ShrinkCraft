@@ -2,6 +2,7 @@ package com.aktheknight.shrinkcraft.init;
 
 import com.aktheknight.shrinkcraft.items.AdvancedShrinker;
 import com.aktheknight.shrinkcraft.items.BasicShrinker;
+import com.aktheknight.shrinkcraft.items.MobShrinker;
 import com.aktheknight.shrinkcraft.items.RedGem;
 import com.aktheknight.shrinkcraft.items.ShrinkGem;
 import com.aktheknight.shrinkcraft.items.ShrinkShard;
@@ -17,8 +18,10 @@ public class ModItems {
 	public static Item redGem;
 	public static Item basicShrinker;
 	public static Item advancedShrinker;
+	public static Item mobShrinker;
 	
 	public static Item testingStick;
+	
 	
 	public static final void init() {
 		shrinkGem = new ShrinkGem();
@@ -31,6 +34,8 @@ public class ModItems {
 		GameRegistry.registerItem(basicShrinker, "basicShrinker");
 		advancedShrinker = new AdvancedShrinker();
 		GameRegistry.registerItem(advancedShrinker, "advancedShrinker");
+		mobShrinker = new MobShrinker();
+		GameRegistry.registerItem(mobShrinker, "mobShrinker");
 		
 		testingStick = new TestingStick();
 		GameRegistry.registerItem(testingStick, "testingStick");

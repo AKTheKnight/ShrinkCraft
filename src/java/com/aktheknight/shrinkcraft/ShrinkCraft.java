@@ -18,7 +18,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ShrinkCraft {
 	public static final String MODID = "ShrinkCraft";
 	public static final String MODNAME = "ShrinkCraft";
-	public static final String VERSION = "1.7.10-1.0.3";
+	public static final String VERSION = "1.7.10-1.0.4";
 	
 	@Mod.Instance
 	public static ShrinkCraft instance;

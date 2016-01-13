@@ -2,9 +2,17 @@
 package com.aktheknight.shrinkcraft.items;
 
 import com.aktheknight.shrinkcraft.ShrinkCraft;
+import com.aktheknight.shrinkcraft.Util;
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class TestingStick extends Item {
 	
@@ -17,8 +25,8 @@ public class TestingStick extends Item {
 		setTextureName(ShrinkCraft.MODID + ":" + unlocalizedName);
 	}
 	
-/*	private boolean hasBlock(NBTTagCompound comp) {
-		if (comp != null && comp.hasKey("block")) {
+	private boolean hasBlock(NBTTagCompound comp) {
+		if (comp != null && comp.hasKey("hasBlock")) {
 			return true;
 		}
 		return false;
@@ -166,11 +174,13 @@ public class TestingStick extends Item {
             else {
             	Util.error(player, "You can't select one or more of these blocks");
             }
+            
+            tagCompound.setBoolean("hasBlocks", true);
     	}
     	else {
         	Util.error(player, "You can't select one or more of these blocks");
         }
         
     }
-	*/
+	
 }
